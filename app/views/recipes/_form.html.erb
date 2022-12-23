@@ -1,9 +1,6 @@
-<%= form_with model: @recipe do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :instructions %>
-  <%= f.text_field :instructions %>
-  <%= f.label :avg_shelf_life %>
-  <%= f.number_field :avg_shelf_life %>
+<%= simple_form_for(recipe) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :instructions %>
+  <%= f.input :avg_shelf_life %>
   <%= f.submit %>
 <% end %>

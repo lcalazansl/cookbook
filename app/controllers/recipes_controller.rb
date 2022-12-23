@@ -13,7 +13,7 @@ class RecipesController < ActionController::Base
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.save
-    redirect_to recipes_path(@recipe)
+    redirect_to recipe_path(@recipe)
   end
   def edit
     # @recipe = Recipe.find(params[:id])
@@ -21,7 +21,7 @@ class RecipesController < ActionController::Base
   def update
     # @recipe = Recipe.find(params[:id])
     @recipe.update(recipe_params)
-    redirect_to recipes_path(@recipe)
+    redirect_to recipe_path(@recipe)
   end
   def destroy
     # @recipe = Recipe.find(params[:id])
