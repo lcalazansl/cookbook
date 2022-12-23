@@ -1,3 +1,7 @@
 <h2><%= @recipe.name %></h2>
 <p><%= @recipe.instructions %></p>
 <p><%= @recipe.avg_shelf_life %></p>
+<%= link_to "Delete",
+  recipe_path(@recipe),
+  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}
+%>

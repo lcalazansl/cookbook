@@ -21,6 +21,11 @@ class RecipesController < ActionController::Base
     @recipe.update(recipe_params)
     redirect_to recipes_path(@recipe)
   end
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_path, status: :see_other
+  end
 
   private
 
