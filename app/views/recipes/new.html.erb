@@ -1,9 +1,1 @@
-<%= form_with model: @recipe do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :instructions %>
-  <%= f.text_field :instructions %>
-  <%= f.label :avg_shelf_life %>
-  <%= f.number_field :avg_shelf_life %>
-  <%= f.submit %>
-<% end %>
+<%= render 'form', recipe: @recipe %>
