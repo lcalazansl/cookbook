@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>
+    <%= link_to "All ingredients (#{Ingredient.count})", ingredients_path %>
+    <button>
+      <%= link_to "New ingredient", new_ingredient_path %>
+    </button>
+  </h3>
+
+  <ul>
+    <% Ingredient.all.each do |ingredient|%>
+      <li>
+        <%= link_to ingredient.name, ingredient_path(ingredient) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

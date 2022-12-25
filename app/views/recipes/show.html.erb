@@ -9,6 +9,6 @@
   <%= link_to "Edit recipe", edit_recipe_path %>
 </button>
 <button>
-  <%= debug link_to "Delete", recipe_path(@recipe),
+  <%= link_to "Delete", recipe_path(@recipe),
   method: 'delete', data: { confirm: 'Are you sure?' } %>
 </button>

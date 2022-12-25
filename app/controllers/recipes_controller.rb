@@ -3,6 +3,7 @@ class RecipesController < ActionController::Base
 
   def index
     @recipes = Recipe.all
+    
   end
   def show
     # @recipe = Recipe.find(params[:id])
@@ -25,9 +26,7 @@ class RecipesController < ActionController::Base
   end
   def destroy
     raise
-    @recipe = Recipe.find(recipe_params)
-    raise
-    @recipe.destroy
+    @recipe = Recipe.find(set_recipe).destroy
     redirect_to recipe_path, status: :see_other
   end
 

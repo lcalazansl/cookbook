@@ -4,6 +4,7 @@ class IngredientsController < ActionController::Base
   def index
     @ingredients = Ingredient.all
   end
+
   def show
     # @ingredient = ingredient.find(params[:id])
   end
