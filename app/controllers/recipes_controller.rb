@@ -24,9 +24,11 @@ class RecipesController < ActionController::Base
     redirect_to recipe_path(@recipe)
   end
   def destroy
-    # @recipe = Recipe.find(params[:id])
+    raise
+    @recipe = Recipe.find(recipe_params)
+    raise
     @recipe.destroy
-    redirect_to recipes_path, status: :see_other
+    redirect_to recipe_path, status: :see_other
   end
 
   private

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  storage: MyString
+  avrg_shelf_life: 1
+  allergen_group: MyString
+  diet_group: MyString
+  category: MyString
+
+two:
+  name: MyString
+  storage: MyString
+  avrg_shelf_life: 1
+  allergen_group: MyString
+  diet_group: MyString
+  category: MyString

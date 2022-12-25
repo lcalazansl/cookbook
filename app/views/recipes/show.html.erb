@@ -9,7 +9,6 @@
   <%= link_to "Edit recipe", edit_recipe_path %>
 </button>
 <button>
-  <%= link_to "Delete", recipe_path(@recipe),
-    data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}
-  %>
+  <%= debug link_to "Delete", recipe_path(@recipe),
+  method: 'delete', data: { confirm: 'Are you sure?' } %>
 </button>
