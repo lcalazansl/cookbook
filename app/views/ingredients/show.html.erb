@@ -1,0 +1,19 @@
+<h2><%= @ingredient.name %></h2>
+<p><strong>Suitable for:</strong> <%= @ingredient.diet_group %></p>
+<ul>
+  <li><strong>Allergen:</strong> <%= @ingredient.allergen_group %></li>
+  <li><strong>Storage:</strong> <%= @ingredient.storage %></li>
+  <li><strong>Average Shelf Life:</strong> <%= @ingredient.avrg_shelf_life %></li>
+  <li><strong>Category:</strong> <%= @ingredient.category %></li>
+</ul>
+
+<button>
+  <%= link_to "All ingredients", ingredients_path %>
+</button>
+<button>
+  <%= link_to "Edit ingredient", edit_ingredient_path %>
+</button>
+<button>
+  <%= link_to "Delete", ingredient_path(@ingredient),
+  method: 'delete', data: { confirm: 'Are you sure?' } %>
+</button>
