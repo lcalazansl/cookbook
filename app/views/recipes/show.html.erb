@@ -1,6 +1,19 @@
 <h2><%= @recipe.name %></h2>
-<p><%= @recipe.instructions %></p>
-<p><%= @recipe.avg_shelf_life %></p>
+<ul>
+<% @recipe.measurements.each do |measurement| %>
+  <li>
+    <% recipe_ingredient = @ingredients.find(measurement.id) %>
+    <% if recipe_ingredient.diet_group == 'vegetarian' %>
+      <%= '🍳' %>
+    <% elsif recipe_ingredient.diet_group == 'vegan' %>
+      <%= '🌱' %>
+    <% end %>
+    <%= "#{measurement.quantity} #{measurement.sku} of #{recipe_ingredient.name}" %>
+  </li>
+<% end %>
+</ul>
+<p><strong>Instructions: </strong><%= @recipe.instructions %></p>
+<p><strong>Average Shelf Life: </strong><%= @recipe.avg_shelf_life %></p>
 
 <button>
   <%= link_to "All recipes", recipes_path %>

@@ -3,11 +3,14 @@ class RecipesController < ActionController::Base
 
   def index
     @recipes = Recipe.all
-
+    # @ingredients = Ingredient.all
+    # @measurements = Measurement.all
   end
 
   def show
     # @recipe = Recipe.find(params[:id])
+    @ingredients = Ingredient.all
+    @measurements = Measurement.all
   end
 
   def new

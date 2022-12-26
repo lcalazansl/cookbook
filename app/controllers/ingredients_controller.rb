@@ -6,7 +6,8 @@ class IngredientsController < ActionController::Base
   end
 
   def show
-    # @ingredient = ingredient.find(params[:id])
+    @ingredient = ingredient.find(ingredient_params)
+    
   end
   def new
     @ingredient = Ingredient.new
